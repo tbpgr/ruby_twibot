@@ -100,11 +100,11 @@ def anyone(robert_garcia, twitter_id, tweet)
   when /^\s*十二支 (.*)(\s*)(?<year>\d{4})\z/
     year = Regexp.last_match[:year]
     eto = Eto.name(year.to_i)
-    robert_garcia.tweet "西暦#{year}年 の十二支は #{eto} 年 #{current_time}"
+    robert_garcia.tweet "西暦#{year}年 の十二支は #{eto} 年 \n#{current_time}"
   when /^\s*十干十二支 (.*)(\s*)(?<year>\d{4})\z/
     year = Regexp.last_match[:year]
     eto = Eto.name(year.to_i, false )
-    robert_garcia.tweet "西暦#{year}年 の十干十二支は #{eto} 年 #{current_time}"
+    robert_garcia.tweet "西暦#{year}年 の十干十二支は #{eto} 年 \n#{current_time}"
   when /^\s*ruboty (.*)(\s*)ランキング (?<pos>[\d]{1})\z/
     robert_garcia.tweet(ruboty_gem_rank(Regexp.last_match[:pos].to_i))
   when /^\s*ruboty (.*)(\s*)ランダム\z/
