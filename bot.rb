@@ -65,7 +65,7 @@ end
 
 # Ruboty の ダウンロードランキングをツイート
 # 1-9位まで対応
-def gem_rank(pos)
+def ruboty_gem_rank(pos)
   ruboty_info = RubotySonar.ranking(10)[pos - 1]
   <<-EOS
 Ruboty Download Ranking
@@ -74,26 +74,53 @@ at #{current_time}
   EOS
 end
 
+# Ruboty の Plugin をランダムで紹介
+def ruboty_gem_random
+  ruboty_info = RubotySonar.random
+  text =<<-EOS
+RubotyPluginランダム紹介
+#{ruboty_info[:name]}
+#{ruboty_info[:desc]}
+#{ruboty_info[:homepage_uri]}
+at #{current_time}
+  EOS
+  text.slice(0, 140)
+end
+
+# Not YAGNI。そのうち使う
+def author_only(robert_garcia, twitter_id, tweet)
+  return unless twitter_id == 'tbpgr'
+  # TODO: 管理者限定機能を作ったら利用
+end
+
+def anyone(robert_garcia, twitter_id, tweet)
+  return if twitter_id.nil?
+  tweet = tweet.gsub("@tbpgr_bot", '')
+  case tweet
+  when /^\s*十二支 (.*)(\s*)(?<year>\d{4})\z/
+    year = Regexp.last_match[:year]
+    eto = Eto.name(year.to_i)
+    robert_garcia.tweet "西暦#{year}年 の十二支は #{eto} 年"
+  when /^\s*十干十二支 (.*)(\s*)(?<year>\d{4})\z/
+    year = Regexp.last_match[:year]
+    eto = Eto.name(year.to_i, false )
+    robert_garcia.tweet "西暦#{year}年 の十干十二支は #{eto} 年"
+  when /^\s*ruboty (.*)(\s*)ランキング (?<pos>[\d]{1})\z/
+    robert_garcia.tweet(ruboty_gem_rank(Regexp.last_match[:pos].to_i))
+  when /^\s*ruboty (.*)(\s*)ランダム\z/
+    robert_garcia.tweet(ruboty_gem_random)
+  end
+end
+
 robert_garcia = RobertGarcia.new
 robert_garcia.stream_client.on_timeline_status do |status|
   begin
     twitter_id = status.user.screen_name
-    next unless twitter_id == 'tbpgr'
     tweet = status.text
-    tweet = tweet.gsub("@tbpgr_bot", '')
-    case tweet
-    when /^\s*十二支 (?<year>\d{4})\z/
-      year = Regexp.last_match[:year]
-      eto = Eto.name(year.to_i)
-      robert_garcia.tweet "西暦#{year}年 の十二支は #{eto} 年"
-    when /^\s*十干十二支 (?<year>\d{4})\z/
-      year = Regexp.last_match[:year]
-      eto = Eto.name(year.to_i, false )
-      robert_garcia.tweet "西暦#{year}年 の十干十二支は #{eto} 年"
-    when /^\s*ruboty (.*)(\s*)ランキング (?<pos>[\d]{1})\z/
-      robert_garcia.tweet(gem_rank(Regexp.last_match[:pos].to_i))
-    end
-  rescue
+    # TODO: そのうち使う管理者限定モード
+    # author_only(twitter_id, tweet)
+    anyone(robert_garcia, twitter_id, tweet)
+  rescue => e
     robert_garcia.tweet "bad request #{current_time}"
   end
 end
