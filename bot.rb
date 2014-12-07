@@ -5,6 +5,7 @@ require 'twitter'
 require 'tweetstream'
 require 'eto'
 require 'date'
+require 'ruboty-sonar'
 
 class RobertGarcia
   attr_accessor :client, :stream_client
@@ -62,6 +63,17 @@ def current_time
   DateTime.now.strftime('%Y/%m/%d %H:%M:%S')
 end
 
+# Ruboty の ダウンロードランキングをツイート
+# 1-9位まで対応
+def gem_rank(pos)
+  ruboty_info = RubotySonar.ranking(10)[pos - 1]
+  <<-EOS
+Ruboty Download Ranking
+No#{pos} #{ruboty_info[:name]}(DL #{ruboty_info[:downloads]}) by #{ruboty_info[:authors]}
+at #{current_time}
+  EOS
+end
+
 robert_garcia = RobertGarcia.new
 robert_garcia.stream_client.on_timeline_status do |status|
   begin
@@ -69,14 +81,17 @@ robert_garcia.stream_client.on_timeline_status do |status|
     next unless twitter_id == 'tbpgr'
     tweet = status.text
     tweet = tweet.gsub("@tbpgr_bot", '')
-    if /^\s*十二支 (?<year>\d{4})\z/ =~ tweet
+    case tweet
+    when /^\s*十二支 (?<year>\d{4})\z/
       year = Regexp.last_match[:year]
       eto = Eto.name(year.to_i)
       robert_garcia.tweet "西暦#{year}年 の十二支は #{eto} 年"
-    elsif /^\s*十干十二支 (?<year>\d{4})\z/ =~ tweet
+    when /^\s*十干十二支 (?<year>\d{4})\z/
       year = Regexp.last_match[:year]
       eto = Eto.name(year.to_i, false )
       robert_garcia.tweet "西暦#{year}年 の十干十二支は #{eto} 年"
+    when /^\s*ruboty (.*)(\s*)ランキング (?<pos>[\d]{1})\z/
+      robert_garcia.tweet(gem_rank(Regexp.last_match[:pos].to_i))
     end
   rescue
     robert_garcia.tweet "bad request #{current_time}"
