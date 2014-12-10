@@ -67,11 +67,12 @@ end
 # 1-9位まで対応
 def ruboty_gem_rank(pos)
   ruboty_info = RubotySonar.ranking(10)[pos - 1]
-  <<-EOS
+  text =<<-EOS
 Ruboty Download Ranking
 No#{pos} #{ruboty_info[:name]}(DL #{ruboty_info[:downloads]}) by #{ruboty_info[:authors]}
-at #{current_time}
+at #{current_time} #ruboty
   EOS
+  text.slice(0, 140)
 end
 
 # Ruboty の Plugin をランダムで紹介
@@ -80,9 +81,8 @@ def ruboty_gem_random
   text =<<-EOS
 RubotyPluginランダム紹介
 #{ruboty_info[:name]}
-#{ruboty_info[:desc]}
 #{ruboty_info[:homepage_uri]}
-at #{current_time}
+at #{current_time} #ruboty
   EOS
   text.slice(0, 140)
 end
