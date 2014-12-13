@@ -86,6 +86,17 @@ Ruboty plugin for 小説の書き出し.
 https://github.com/blockgiven/ruboty-opening_sente …
 ~~~
 
+### ランダムツイート
+TL にメッセージが来る度に 10 % の確率で RandomTweet::MESSAGES の中からランダムに1つのメッセージをツイートします。
+RandomTweet::MESSAGES は
+
+* tbpgr が Qiita に投稿している記事のカテゴリまとめ
+* tbpgr が Qiita に投稿している記事の中でストック数の多い記事
+* tbpgr が 作成した gem の紹介
+* tbpgr が 作成した スライドショー の紹介
+
+などです。
+
 ## 補足
-* そのうち、 ruboty + ruboty-twitter adapter に乗り換えようと思っているので
+* そのうち、 ツイートボットフレームワークを作って置き換えようと思っているので
   現状のプログラムの保守性・拡張性はあまり意識していません。
