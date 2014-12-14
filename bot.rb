@@ -8,6 +8,7 @@ require 'date'
 require 'ruboty-sonar'
 
 class RobertGarcia
+  VERSION = '1.0.0'
   attr_accessor :client, :stream_client
 
   def initialize
@@ -109,11 +110,13 @@ def anyone(robert_garcia, twitter_id, tweet)
     robert_garcia.tweet(ruboty_gem_rank(Regexp.last_match[:pos].to_i))
   when /^\s*ruboty (.*)(\s*)ランダム\z/
     robert_garcia.tweet(ruboty_gem_random)
+  when /^(.*)(\s*)今のバージョンは？\z/
+    robert_garcia.tweet("@#{twitter_id} #{RobertGarcia::VERSION}です")
   end
 end
 
 module RandomTweet
-  MESSAGES = [
+  ADV_MESSAGES = [
     "Tbpgr Slides |> 多言語ゴルフ場デスマコロシアム。デスマコロシアムとは？ |> http://tbpgr.github.io/deathma_slide/ #codeiq #デスマコロシアム",
     "Tbpgr Qiita |> GitHub Flow 図解 |> http://qiita.com/tbpgr/items/4ff76ef35c4ff0ec8314",
     "Tbpgr Qiita |> Ruby | アノテーションコメント（TODO、FIXME、OPTIMIZE、HACK、REVIEW） |> http://qiita.com/tbpgr/items/1c046a877c6be4d89876 #ruby",
@@ -134,14 +137,24 @@ module RandomTweet
     "Tbpgr Qiita |> GutLab CI 関連記事 |> https://qiita.com/tbpgr/items/e079210ac52822a33559 #gitlab",
     "Tbpgr Qiita |> GutLab API 関連記事 |> https://qiita.com/tbpgr/items/4f301f8e7788cfbd5ace #gitlab",
     "Tbpgr Qiita |> RuboCop API 関連記事 |> https://qiita.com/tbpgr/items/edbfecb6a6789dd54f47 #rubocop",
-    "Tbpgr gems |> ruboty plugin の README を生成する ruboty-megen gem |> https://github.com/tbpgr/ruboty-megen #ruboty",
-    "Tbpgr gems |> ruboty plugin の Qiita 記事を生成する ruboty-articlegen gem |> https://github.com/tbpgr/ruboty-articlegen #ruboty",
-    "Tbpgr gems |> 西暦から和暦を取得する ruboty plugin,  ruboty-wareki gem |> https://github.com/tbpgr/ruboty-wareki #ruboty",
-    "Tbpgr gems |> 西暦から十二支の名称、emoji を取得する ruboty plugin,  ruboty-eto gem |> https://github.com/tbpgr/ruboty-eto #ruboty",
-    "Tbpgr gems |> 西暦から十二支の名称、emoji を取得する eto gem |> https://github.com/tbpgr/eto #ruboty",
-    "Tbpgr gems |> 日付フォーマットのディレクトリ一括作成を行う defoker gem |> https://github.com/tbpgr/defoker #ruboty",
+    "Tbpgr Gems |> ruboty plugin の README を生成する ruboty-megen gem |> https://github.com/tbpgr/ruboty-megen #ruboty",
+    "Tbpgr Gems |> ruboty plugin の Qiita 記事を生成する ruboty-articlegen gem |> https://github.com/tbpgr/ruboty-articlegen #ruboty",
+    "Tbpgr Gems |> 西暦から和暦を取得する ruboty plugin,  ruboty-wareki gem |> https://github.com/tbpgr/ruboty-wareki #ruboty",
+    "Tbpgr Gems |> 西暦から十二支の名称、emoji を取得する ruboty plugin,  ruboty-eto gem |> https://github.com/tbpgr/ruboty-eto #ruboty",
+    "Tbpgr Gems |> 西暦から十二支の名称、emoji を取得する eto gem |> https://github.com/tbpgr/eto #ruboty",
+    "Tbpgr Gems |> 日付フォーマットのディレクトリ一括作成を行う defoker gem |> https://github.com/tbpgr/defoker #ruboty",
     "Tbpgr Slides |> 日付フォーマットのディレクトリ一括作成を行う defoker gem スライドショー |> http://tbpgr.github.io/defoker_slide/ #defoker",
   ]
+
+  IDLE_TALKS = [
+    '呼んだ？',
+    '中の人などいない',
+    'インド人を右に',
+    'ザンギュラのスーパーウリアッ上',
+    'ジャンプ大パチン',
+  ]
+
+  MESSAGES = ADV_MESSAGES + IDLE_TALKS
 end
 
 def random_advertise(robert_garcia)
