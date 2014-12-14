@@ -6,13 +6,19 @@
 定まっていません。
 
 ## 機能
+コマンド全般に関する注意事項。
+各コマンドは、コマンド途中に自由な文字列を設定できるようにしています。
+これは、ツイッターの重複投稿対策です。
+挿入する文字列は何でも良いのですが、現在時刻などが使い勝手が良いでしょう。
+「いま」で変換して、現在日時を挿入するのが楽。
+
 ### 干支取得機能
 * 十二支  
 ※十二支と年数の間に適当な文字を挟むことが可能。重複ツイート対策。
 
 ~~~
 # @tbpgr
-@tbpgr_bot 十二支 1980
+@tbpgr_bot 十二支 <ランダム文字列> 1980
 # @tbpgr_bot
 西暦1980年の十二支は 申 年
 ~~~
@@ -22,7 +28,7 @@
 
 ~~~
 # @tbpgr
-@tbpgr_bot 十干十二支 1980
+@tbpgr_bot 十干十二支 <ランダム文字列>  1980
 # @tbpgr_bot
 西暦1980年の十二支は 庚申 年
 ~~~
@@ -37,7 +43,7 @@
 
 ~~~
 # @tbpgr
-@tbpgr_bot ruboty ランキング 1
+@tbpgr_bot ruboty <ランダム文字列>  ランキング 1
 # @tbpgr_bot
 Ruboty Download Ranking
 No1 ruboty-weather(DL 1272) by Ryoichi SEKIGUCHI
@@ -48,7 +54,7 @@ at 2014/12/07 14:57:56
 
 ~~~
 # @tbpgr
-@tbpgr_bot ruboty ランキング 2
+@tbpgr_bot ruboty <ランダム文字列>  ランキング 2
 # @tbpgr_bot
 Ruboty Download Ranking
 No2 ruboty-redis(DL 925) by Ryo Nakamura
@@ -65,7 +71,7 @@ gemの説明文などが長い場合、ツイートは140文字で切れます�
 
 ~~~
 # @tbpgr
-@tbpgr_bot ruboty ランダム
+@tbpgr_bot ruboty <ランダム文字列> ランダム
 # @tbpgr_bot
 RubotyPluginランダム紹介
 ruboty-deadline
@@ -78,7 +84,7 @@ at 2014/12/07 21:4
 
 ~~~
 # @tbpgr
-@tbpgr_bot ruboty 適当な文字列 ランダム
+@tbpgr_bot ruboty <ランダム文字列> ランダム
 # @tbpgr_bot
 RubotyPluginランダム紹介
 ruboty-opening_sentence
@@ -102,7 +108,7 @@ RandomTweet::MESSAGES は
 
 ~~~
 # @tbpgr
-@tbpgr_bot 今のバージョンは？
+@tbpgr_bot <ランダム文字列> 今のバージョンは？
 # @tbpgr_bot
 @tbpgr 1.0.0です
 ~~~
