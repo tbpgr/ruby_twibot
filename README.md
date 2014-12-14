@@ -90,6 +90,7 @@ RubotyPluginランダム紹介
 ruboty-opening_sentence
 Ruboty plugin for 小説の書き出し.
 https://github.com/blockgiven/ruboty-opening_sente …
+at 2014/12/07 21:4
 ~~~
 
 ### ランダムツイート
@@ -111,6 +112,18 @@ RandomTweet::MESSAGES は
 @tbpgr_bot <ランダム文字列> 今のバージョンは？
 # @tbpgr_bot
 @tbpgr 1.0.0です
+at 2014/12/07 21:4
+~~~
+
+### ヘルプ
+ヘルプを確認します
+
+~~~
+# @tbpgr
+@tbpgr_bot <ランダム文字列> ヘルプどこ？
+# @tbpgr_bot
+@tbpgr どうぞ(´・ω・)つ https://github.com/tbpgr/ruby_twibot/blob/master/README.md
+at 2014/12/07 21:4
 ~~~
 
 ## 補足

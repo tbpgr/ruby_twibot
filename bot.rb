@@ -112,6 +112,8 @@ def anyone(robert_garcia, twitter_id, tweet)
     robert_garcia.tweet(ruboty_gem_random)
   when /^(.*)(\s*)今のバージョンは？\z/
     robert_garcia.tweet("@#{twitter_id} #{RobertGarcia::VERSION}です \n#{current_time}")
+  when /^(.*)(\s*)ヘルプどこ？\z/
+    robert_garcia.tweet("@#{twitter_id} どうぞ(´・ω・)つ https://github.com/tbpgr/ruby_twibot/blob/master/README.md \n#{current_time}")
   end
 end
 
