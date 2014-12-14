@@ -111,7 +111,7 @@ RandomTweet::MESSAGES は
 # @tbpgr
 @tbpgr_bot <ランダム文字列> 今のバージョンは？
 # @tbpgr_bot
-@tbpgr 1.0.0です
+@tbpgr 1.0.0です。詳細はこちらを どうぞ(´・ω・)つ https://github.com/tbpgr/ruby_twibot/blob/master/CHANGELOG.md
 at 2014/12/07 21:4
 ~~~
 
