@@ -8,7 +8,7 @@ require 'date'
 require 'ruboty-sonar'
 
 class RobertGarcia
-  VERSION = '1.0.0'
+  VERSION = '1.0.1'
   attr_accessor :client, :stream_client
 
   def initialize
