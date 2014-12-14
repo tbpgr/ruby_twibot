@@ -111,7 +111,7 @@ def anyone(robert_garcia, twitter_id, tweet)
   when /^\s*ruboty (.*)(\s*)ランダム\z/
     robert_garcia.tweet(ruboty_gem_random)
   when /^(.*)(\s*)今のバージョンは？\z/
-    robert_garcia.tweet("@#{twitter_id} #{RobertGarcia::VERSION}です")
+    robert_garcia.tweet("@#{twitter_id} #{RobertGarcia::VERSION}です \n#{current_time}")
   end
 end
 
