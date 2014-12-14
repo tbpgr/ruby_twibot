@@ -137,6 +137,7 @@ module RandomTweet
     "Tbpgr Qiita |> GitLab CI 関連記事 |> https://qiita.com/tbpgr/items/e079210ac52822a33559 #gitlab",
     "Tbpgr Qiita |> GitLab API 関連記事 |> https://qiita.com/tbpgr/items/4f301f8e7788cfbd5ace #gitlab",
     "Tbpgr Qiita |> RuboCop API 関連記事 |> https://qiita.com/tbpgr/items/edbfecb6a6789dd54f47 #rubocop",
+    "Ruboty のコードリーディングで Ruboty の仕組みを理解すると共に Ruby の設計・実装の定石を学ぶ |> http://qiita.com/tbpgr/items/5887003cd2e69e9d8867 #rubocop",
     "Tbpgr Gems |> ruboty plugin の README を生成する ruboty-megen gem |> https://github.com/tbpgr/ruboty-megen #ruboty",
     "Tbpgr Gems |> ruboty plugin の Qiita 記事を生成する ruboty-articlegen gem |> https://github.com/tbpgr/ruboty-articlegen #ruboty",
     "Tbpgr Gems |> 西暦から和暦を取得する ruboty plugin,  ruboty-wareki gem |> https://github.com/tbpgr/ruboty-wareki #ruboty",
