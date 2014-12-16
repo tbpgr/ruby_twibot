@@ -197,7 +197,8 @@ module RandomTweet
   MESSAGES = ADV_MESSAGES + IDLE_TALKS
 end
 
-def random_advertise(robert_garcia)
+def random_advertise(robert_garcia, twitter)
+  return if tweet.include?('@')
   return if rand > 0.2
   robert_garcia.tweet("#{RandomTweet::MESSAGES.sample} \n#{current_time}")
 end
@@ -205,9 +206,9 @@ end
 robert_garcia = RobertGarcia.new
 robert_garcia.stream_client.on_timeline_status do |status|
   begin
-    random_advertise(robert_garcia)
     twitter_id = status.user.screen_name
     tweet = status.text
+    random_advertise(robert_garcia, tweet)
     # TODO: そのうち使う管理者限定モード
     # author_only(twitter_id, tweet)
     anyone(robert_garcia, twitter_id, tweet)
