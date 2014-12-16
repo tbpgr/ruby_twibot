@@ -93,6 +93,25 @@ https://github.com/blockgiven/ruboty-opening_sente …
 at 2014/12/07 21:4
 ~~~
 
+### QiitaScouter
+Qiita戦闘力を計測します
+詳しくは [qiita_scouter](https://github.com/tbpgr/qiita_scouter)
+
+※ 末尾の `ランダム` 部に適当な文字を挟むことが可能。重複ツイート対策。
+
+~~~
+# @tbpgr
+@tbpgr_bot tbpgrのQiita戦闘力はいくつ？ ランダム
+# @tbpgr_bot
+ユーザー名: tbpgr 戦闘力: 428000 攻撃力: 68800 知力: 344800 すばやさ: 14400 #qiita_scouter 
+2014/12/17 03:17:02
+# @tbpgr
+@tbpgr_bot yaottiのQiita戦闘力はいくつ？ ランダム
+# @tbpgr_bot
+ユーザー名: tbpgr 戦闘力: 428000 攻撃力: 68800 知力: 344800 すばやさ: 14400 #qiita_scouter 
+2014/12/17 03:18:02
+~~~
+
 ### ランダムツイート
 TL にメッセージが来る度に 10 % の確率で RandomTweet::MESSAGES の中からランダムに1つのメッセージをツイートします。
 RandomTweet::MESSAGES は

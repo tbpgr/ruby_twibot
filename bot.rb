@@ -6,9 +6,10 @@ require 'tweetstream'
 require 'eto'
 require 'date'
 require 'ruboty-sonar'
+require 'qiita_scouter_core'
 
 class RobertGarcia
-  VERSION = '1.0.1'
+  VERSION = '1.0.2'
   attr_accessor :client, :stream_client
 
   def initialize
@@ -94,6 +95,10 @@ def author_only(robert_garcia, twitter_id, tweet)
   # TODO: 管理者限定機能を作ったら利用
 end
 
+def ruboty_gem_random
+
+  end
+
 def anyone(robert_garcia, twitter_id, tweet)
   return if twitter_id.nil?
   tweet = tweet.gsub("@tbpgr_bot", '')
@@ -114,6 +119,11 @@ def anyone(robert_garcia, twitter_id, tweet)
     robert_garcia.tweet("@#{twitter_id} #{RobertGarcia::VERSION}です。詳細はこちらを どうぞ(´・ω・)つ https://github.com/tbpgr/ruby_twibot/blob/master/CHANGELOG.md \n#{current_time}")
   when /^(.*)(\s*)ヘルプどこ？\z/
     robert_garcia.tweet("@#{twitter_id} どうぞ(´・ω・)つ https://github.com/tbpgr/ruby_twibot/blob/master/README.md \n#{current_time}")
+  when /^\s(?<user>.*)のQiita戦闘力はいくつ？\s*(.*)\z/
+    user = Regexp.last_match[:user]
+    power_levels = QiitaScouter::Core.new.analyze(user)
+    message = sprintf("ユーザー名: %s 戦闘力: %s 攻撃力: %s 知力: %s すばやさ: %s #qiita_scouter \n#{current_time}", user, *power_levels)
+    robert_garcia.tweet(message)
   end
 end
 
@@ -197,7 +207,8 @@ module RandomTweet
   MESSAGES = ADV_MESSAGES + IDLE_TALKS
 end
 
-def random_advertise(robert_garcia, tweet)
+def random_advertise(robert_garcia, twitter_id, tweet)
+  return if twitter_id == 'tbpgr_bot'
   return if tweet.include?('@')
   return if rand > 0.2
   robert_garcia.tweet("#{RandomTweet::MESSAGES.sample} \n#{current_time}")
@@ -208,7 +219,7 @@ robert_garcia.stream_client.on_timeline_status do |status|
   begin
     twitter_id = status.user.screen_name
     tweet = status.text
-    random_advertise(robert_garcia, tweet)
+    random_advertise(robert_garcia, twitter_id, tweet)
     # TODO: そのうち使う管理者限定モード
     # author_only(twitter_id, tweet)
     anyone(robert_garcia, twitter_id, tweet)
