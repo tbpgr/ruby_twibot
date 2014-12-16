@@ -197,7 +197,7 @@ module RandomTweet
   MESSAGES = ADV_MESSAGES + IDLE_TALKS
 end
 
-def random_advertise(robert_garcia, twitter)
+def random_advertise(robert_garcia, tweet)
   return if tweet.include?('@')
   return if rand > 0.2
   robert_garcia.tweet("#{RandomTweet::MESSAGES.sample} \n#{current_time}")
