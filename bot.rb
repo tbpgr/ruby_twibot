@@ -95,10 +95,6 @@ def author_only(robert_garcia, twitter_id, tweet)
   # TODO: 管理者限定機能を作ったら利用
 end
 
-def ruboty_gem_random
-
-  end
-
 def anyone(robert_garcia, twitter_id, tweet)
   return if twitter_id.nil?
   tweet = tweet.gsub("@tbpgr_bot", '')
