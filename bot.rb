@@ -133,6 +133,7 @@ module RandomTweet
     "Tbpgr Qiita |> Ruby | RubyKaigi2014で話題に。安全に Ruby のコードを変換できる Synvert gem をインストール |> http://qiita.com/tbpgr/items/8bdb92fa8f9324727336 #ruby",
     "Tbpgr Qiita |> Ruboty って何？どうやって動かすの？ Hubot と何が違うの？どっちを使えばいいの？ |> http://qiita.com/tbpgr/items/39d93a0a33ec99e37da1 #ruboty",
     "Tbpgr Qiita |> Qiita の記事の見出しに Font-Awesome を利用して見栄えを良くする |> http://qiita.com/tbpgr/items/361d8aaa38fb57d75216 #qiita",
+    "Tbpgr Qiita |> Qiitaの特定ユーザー・特定タグの記事をテーブル形式のまとめ記事として生成する QiitaMatome gem を作ってみた |> http://qiita.com/tbpgr/items/36089a184aa0bd7d7954 #qiita",
     "Tbpgr Qiita |> Itamae 関連記事 |> https://qiita.com/tbpgr/items/8b0170341b8095ced543 #itamae",
     "Tbpgr Qiita |> Gemfury 関連記事 |> https://qiita.com/tbpgr/items/a534dd2aa10995abc37a #gemfury",
     "Tbpgr Qiita |> Docker 関連記事 |> https://qiita.com/tbpgr/items/f49ea1df791612aca94f #docker",
