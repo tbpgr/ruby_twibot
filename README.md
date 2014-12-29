@@ -122,7 +122,7 @@ Qiita戦闘力を計測します
 
 ~~~
 # @tbpgr
-@tbpgr_bot 20:17 てんやわんやボットを呼んで？
+@tbpgr_bot 20:17 てんやわんやボットを呼んで
 # @tbpgr_bot
 @tenyawanya_bot とり 20:09
 # @tenyawanya_bot
