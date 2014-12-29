@@ -112,6 +112,23 @@ Qiita戦闘力を計測します
 2014/12/17 03:19:55
 ~~~
 
+### てんやわんやボットの呼び出し
+てんやわんやさんのボットを呼び出します。
+[てんやわんやさんのボット の仕様](http://tenyawanya.com/msm-04/)
+
+詳しくは [qiita_scouter](https://github.com/tbpgr/qiita_scouter)
+
+※ 末尾の `ランダム` 部に適当な文字を挟むことが可能。重複ツイート対策。
+
+~~~
+# @tbpgr
+@tbpgr_bot 20:17 てんやわんやボットを呼んで？
+# @tbpgr_bot
+@tenyawanya_bot とり 20:09
+# @tenyawanya_bot
+@tbpgr_bot http://instagram.com/p/lKDE_5vQwr/ 
+~~~
+
 ### ランダムツイート
 TL にメッセージが来る度に 10 % の確率で RandomTweet::MESSAGES の中からランダムに1つのメッセージをツイートします。
 RandomTweet::MESSAGES は

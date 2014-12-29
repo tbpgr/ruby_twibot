@@ -9,7 +9,7 @@ require 'ruboty-sonar'
 require 'qiita_scouter_core'
 
 class RobertGarcia
-  VERSION = '1.0.2'
+  VERSION = '1.0.3'
   attr_accessor :client, :stream_client
 
   def initialize
@@ -89,6 +89,13 @@ at #{current_time} #ruboty
   text.slice(0, 140)
 end
 
+
+# @tenyawanya_bot に話しかける
+def talk_to_tenyawanya_bot
+  tanya_keys = %w(とり こんばんは（こんばんわ） かわいい よくできました ちいさい すもけ おはよう おやすみ いえーい ななちん らーめん ミラノ風 たべもの おやつ)
+  "@tenyawanya_bot #{tanya_keys.sample}"
+end
+
 # Not YAGNI。そのうち使う
 def author_only(robert_garcia, twitter_id, tweet)
   return unless twitter_id == 'tbpgr'
@@ -115,6 +122,8 @@ def anyone(robert_garcia, twitter_id, tweet)
     robert_garcia.tweet("@#{twitter_id} #{RobertGarcia::VERSION}です。詳細はこちらを どうぞ(´・ω・)つ https://github.com/tbpgr/ruby_twibot/blob/master/CHANGELOG.md \n#{current_time}")
   when /^(.*)(\s*)ヘルプどこ？\z/
     robert_garcia.tweet("@#{twitter_id} どうぞ(´・ω・)つ https://github.com/tbpgr/ruby_twibot/blob/master/README.md \n#{current_time}")
+  when /^(.*)(\s*)てんやわんやボットを呼んで\z/
+    robert_garcia.tweet("#{talk_to_tenyawanya_bot} \n#{current_time}")
   when /^\s(?<user>.*)のQiita戦闘力はいくつ？\s*(.*)\z/
     user = Regexp.last_match[:user]
     power_levels = QiitaScouter::Core.new.analyze(user)
@@ -202,10 +211,27 @@ module RandomTweet
     'へのつっぱりはいらんですよ',
     '「もうひといきじゃ パワーをメテオに」「いいですとも」',
     '今のはメラゾーマではない…メラだ',
-    'クロコダイーーーーン！！',
+    'クロコダイーーーーン！！'
   ]
 
-  MESSAGES = ADV_MESSAGES + IDLE_TALKS
+  TENYAWANYA_BOT = [
+    '@tenyawanya_bot とり',
+    '@tenyawanya_bot こんばんは（こんばんわ）',
+    '@tenyawanya_bot かわいい',
+    '@tenyawanya_bot よくできました',
+    '@tenyawanya_bot ちいさい',
+    '@tenyawanya_bot すもけ',
+    '@tenyawanya_bot おはよう',
+    '@tenyawanya_bot おやすみ',
+    '@tenyawanya_bot いえーい',
+    '@tenyawanya_bot ななちん',
+    '@tenyawanya_bot らーめん',
+    '@tenyawanya_bot ミラノ風',
+    '@tenyawanya_bot たべもの',
+    '@tenyawanya_bot おやつ'
+  ]
+
+  MESSAGES = ADV_MESSAGES + IDLE_TALKS + TENYAWANYA_BOT
 end
 
 def random_advertise(robert_garcia, twitter_id, tweet)
