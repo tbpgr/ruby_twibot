@@ -116,13 +116,11 @@ Qiita戦闘力を計測します
 てんやわんやさんのボットを呼び出します。
 [てんやわんやさんのボット の仕様](http://tenyawanya.com/msm-04/)
 
-詳しくは [qiita_scouter](https://github.com/tbpgr/qiita_scouter)
-
-※ 末尾の `ランダム` 部に適当な文字を挟むことが可能。重複ツイート対策。
+※ `ランダム` 部に適当な文字を挟むことが可能。重複ツイート対策。
 
 ~~~
 # @tbpgr
-@tbpgr_bot 20:17 てんやわんやボットを呼んで
+@tbpgr_bot ランダム てんやわんやボットを呼んで
 # @tbpgr_bot
 @tenyawanya_bot とり 20:09
 # @tenyawanya_bot
