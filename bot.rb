@@ -164,7 +164,7 @@ module RandomTweet
     "Tbpgr Gems |> 西暦から和暦を取得する ruboty plugin,  ruboty-wareki gem |> https://github.com/tbpgr/ruboty-wareki #ruboty",
     "Tbpgr Gems |> 西暦から十二支の名称、emoji を取得する ruboty plugin,  ruboty-eto gem |> https://github.com/tbpgr/ruboty-eto #ruboty",
     "Tbpgr Gems |> 西暦から十二支の名称、emoji を取得する eto gem |> https://github.com/tbpgr/eto #ruboty",
-    "Tbpgr Gems |> 日付フォーマットのディレクトリ一括作成を行う defoker gem |> https://github.com/tbpgr/defoker #ruboty",
+    "Tbpgr Gems |> 日付フォーマットのディレクトリ一括作成を行う defoker gem |> https://github.com/tbpgr/defoker",
     "Tbpgr Slides |> 日付フォーマットのディレクトリ一括作成を行う defoker gem スライドショー |> http://tbpgr.github.io/defoker_slide/ #defoker",
   ]
 
