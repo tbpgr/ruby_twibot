@@ -231,7 +231,11 @@ module RandomTweet
     '@tenyawanya_bot おやつ'
   ]
 
-  MESSAGES = ADV_MESSAGES + IDLE_TALKS + TENYAWANYA_BOT
+  SYOBOCHIRN_BOT = [
+    '@syobochirn おみくじひいてー'
+  ]
+
+  MESSAGES = ADV_MESSAGES + IDLE_TALKS + TENYAWANYA_BOT + SYOBOCHIRN_BOT
 end
 
 def random_advertise(robert_garcia, twitter_id, tweet)
