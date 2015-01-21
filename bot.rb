@@ -231,11 +231,24 @@ module RandomTweet
     '@tenyawanya_bot おやつ'
   ]
 
+  CHOMADO_BOT = [
+    '@chomado_bot ﾄﾞｳｿﾞ(・∀・)つホモ',
+    '@chomado_bot ﾄﾞｳｿﾞ(・∀・)つBL',
+    '@chomado_bot ﾄﾞｳｿﾞ(・∀・)つ松牛',
+    '@chomado_bot ﾄﾞｳｿﾞ(・∀・)つ百合',
+    '@chomado_bot ﾄﾞｳｿﾞ(・∀・)つ美女',
+    '@chomado_bot ﾄﾞｳｿﾞ(・∀・)つｼｮﾀ',
+    '@chomado_bot ﾄﾞｳｿﾞ(・∀・)つ黒歴史',
+    '@chomado_bot ₍₍⁽⁽(ી(*ﾟ▽ﾟ*)ʃ)₎₎⁾⁾ノリノリ！',
+    '@chomado_bot (｀・ω・´)..oO(貴様の Enter Key は頂いた)',
+    '@chomado_bot ┌（┌ *ﾟ▽ﾟ*）┐ ティービィィイ...'
+  ]
+
   SYOBOCHIRN_BOT = [
     '@syobochirn おみくじひいてー'
   ]
 
-  MESSAGES = ADV_MESSAGES + IDLE_TALKS + TENYAWANYA_BOT + SYOBOCHIRN_BOT
+  MESSAGES = ADV_MESSAGES + IDLE_TALKS + TENYAWANYA_BOT + SYOBOCHIRN_BOT + CHOMADO_BOT
 end
 
 def random_advertise(robert_garcia, twitter_id, tweet)
