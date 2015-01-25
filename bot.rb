@@ -232,16 +232,18 @@ module RandomTweet
   ]
 
   CHOMADO_BOT = [
-    '@chomado_bot ﾄﾞｳｿﾞ(・∀・)つホモ',
-    '@chomado_bot ﾄﾞｳｿﾞ(・∀・)つBL',
-    '@chomado_bot ﾄﾞｳｿﾞ(・∀・)つ松牛',
-    '@chomado_bot ﾄﾞｳｿﾞ(・∀・)つ百合',
-    '@chomado_bot ﾄﾞｳｿﾞ(・∀・)つ美女',
-    '@chomado_bot ﾄﾞｳｿﾞ(・∀・)つｼｮﾀ',
-    '@chomado_bot ﾄﾞｳｿﾞ(・∀・)つ黒歴史',
-    '@chomado_bot ₍₍⁽⁽(ી(*ﾟ▽ﾟ*)ʃ)₎₎⁾⁾ノリノリ！',
-    '@chomado_bot (｀・ω・´)..oO(貴様の Enter Key は頂いた)',
-    '@chomado_bot ┌（┌ *ﾟ▽ﾟ*）┐ ティービィィイ...'
+    '@chomado_bot ホモ、好きですか？',
+    '@chomado_bot BL、好きですか？',
+    '@chomado_bot 松牛、好きですか？',
+    '@chomado_bot 百合、好きですか？',
+    '@chomado_bot 美女、好きですか？',
+    '@chomado_bot ｼｮﾀ、好きですか？',
+    '@chomado_bot 黒歴史をどうぞ。',
+    '@chomado_bot ご主人様をどう思ってますか？',
+    '@chomado_bot 落ち込んだ時何をしますか？',
+    '@chomado_bot C++ と Python と Ruby ならどれが好きですか？',
+    '@chomado_bot 今何時ですか？',
+    '@chomado_bot 「ちょまど」ってどういう意味ですか？'
   ]
 
   SYOBOCHIRN_BOT = [
