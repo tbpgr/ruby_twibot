@@ -166,7 +166,7 @@ module RandomTweet
     "Tbpgr Gems |> 西暦から十二支の名称、emoji を取得する eto gem |> https://github.com/tbpgr/eto #ruboty",
     "Tbpgr Gems |> 日付フォーマットのディレクトリ一括作成を行う defoker gem |> https://github.com/tbpgr/defoker",
     "Tbpgr Slides |> 日付フォーマットのディレクトリ一括作成を行う defoker gem スライドショー |> http://tbpgr.github.io/defoker_slide/ #defoker",
-    "Tbpgr Slides |> Chrome 拡張 qiita ( ˘ω˘)ﾉ""Y☆Yヾ(˘ω˘ ) twitter スライドショー スライドショー |> http://bit.ly/1JCB73m",
+    "Tbpgr Slides |> Chrome 拡張 qiita ( ˘ω˘)ﾉ""Y☆Yヾ(˘ω˘ ) twitter スライドショー |> http://bit.ly/1JCB73m",
   ]
 
   IDLE_TALKS = [
