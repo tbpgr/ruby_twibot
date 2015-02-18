@@ -233,25 +233,35 @@ module RandomTweet
   ]
 
   CHOMADO_BOT = [
-    '@chomado_bot ホモ、好きですか？',
-    '@chomado_bot BL、好きですか？',
-    '@chomado_bot 松牛、好きですか？',
-    '@chomado_bot 百合、好きですか？',
-    '@chomado_bot 美女、好きですか？',
-    '@chomado_bot ｼｮﾀ、好きですか？',
-    '@chomado_bot 黒歴史をどうぞ。',
-    '@chomado_bot ご主人様をどう思ってますか？',
-    '@chomado_bot 落ち込んだ時何をしますか？',
-    '@chomado_bot C++ と Python と Ruby ならどれが好きですか？',
-    '@chomado_bot 今何時ですか？',
-    '@chomado_bot 「ちょまど」ってどういう意味ですか？'
+    '@chomado_bot ホモ、足りてますか？',
+    '@chomado_bot 柴田亜美先生の作品はBLに入りますか？',
+    '@chomado_bot 松牛とワイシャツと私',
+    '@chomado_bot 絵師ディシ',
+    '@chomado_bot あーホモ',
+    '@chomado_bot みんな、オラにちょっとずつでいいからホモを分けてくれ',
+    '@chomado_bot スターフラチナッ！ﾎﾓﾎﾓﾎﾓﾎﾓﾎﾓﾎﾓﾎﾓｫ！！',
+    '@chomado_bot throw NullHomoException',
+    '@chomado_bot throw IndexHomoBoundException',
+    '@chomado_bot throw InvalidHomoArgumentException',
+    '@chomado_bot ホモ毛神拳。ホモモーモ・モーモモ'
+  ]
+
+  MUGI_SE = [
+    '@MUGI1208 今日は午前何時に帰るんですか？',
+    '@MUGI1208 22時からの会議に出席願います',
+    '@MUGI1208 早く帰るために1時間早く出社してください（結果勤務時間が1時間延長）',
+    '@MUGI1208 先月は何時間労働でしたか？',
+    '@MUGI1208 あいうえお作文「ざ・ん・ぎ・ょ・う」はい、どうぞ。 #無茶ぶり',
+    '@MUGI1208 あいうえお作文「で・す・ま・あ・ち」はい、どうぞ。 #無茶ぶり',
+    '@MUGI1208 あいうえお作文「え・す・あ・い・あ」はい、どうぞ。 #無茶ぶり',
+    '@MUGI1208 あいうえお作文「む・ぎ・え・す・い」はい、どうぞ。 #無茶ぶり'
   ]
 
   SYOBOCHIRN_BOT = [
     '@syobochirn おみくじひいてー'
   ]
 
-  MESSAGES = ADV_MESSAGES + IDLE_TALKS + TENYAWANYA_BOT + SYOBOCHIRN_BOT + CHOMADO_BOT
+  MESSAGES = ADV_MESSAGES + IDLE_TALKS + TENYAWANYA_BOT + SYOBOCHIRN_BOT + CHOMADO_BOT + MUGI_SE
 end
 
 def random_advertise(robert_garcia, twitter_id, tweet)
