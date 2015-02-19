@@ -246,22 +246,11 @@ module RandomTweet
     '@chomado_bot ホモ毛神拳。ホモモーモ・モーモモ'
   ]
 
-  MUGI_SE = [
-    '@MUGI1208 今日は午前何時に帰るんですか？',
-    '@MUGI1208 22時からの会議に出席願います',
-    '@MUGI1208 早く帰るために1時間早く出社してください（結果勤務時間が1時間延長）',
-    '@MUGI1208 先月は何時間労働でしたか？',
-    '@MUGI1208 あいうえお作文「ざ・ん・ぎ・ょ・う」はい、どうぞ。 #無茶ぶり',
-    '@MUGI1208 あいうえお作文「で・す・ま・あ・ち」はい、どうぞ。 #無茶ぶり',
-    '@MUGI1208 あいうえお作文「え・す・あ・い・あ」はい、どうぞ。 #無茶ぶり',
-    '@MUGI1208 あいうえお作文「む・ぎ・え・す・い」はい、どうぞ。 #無茶ぶり'
-  ]
-
   SYOBOCHIRN_BOT = [
     '@syobochirn おみくじひいてー'
   ]
 
-  MESSAGES = ADV_MESSAGES + IDLE_TALKS + TENYAWANYA_BOT + SYOBOCHIRN_BOT + CHOMADO_BOT + MUGI_SE
+  MESSAGES = ADV_MESSAGES + IDLE_TALKS + TENYAWANYA_BOT + SYOBOCHIRN_BOT + CHOMADO_BOT
 end
 
 def random_advertise(robert_garcia, twitter_id, tweet)
