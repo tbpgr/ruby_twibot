@@ -1,6 +1,6 @@
 # TbpgrTweet Bot
 ## 概要
-私の Tweet Bot です。
+私の Tweet Bot ( @tbpgr_bot ) です。
 
 ## 目的
 定まっていません。
