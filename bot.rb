@@ -256,7 +256,7 @@ end
 def random_advertise(robert_garcia, twitter_id, tweet)
   return if twitter_id == 'tbpgr_bot'
   return if tweet.include?('@')
-  return if rand > 0.2
+  return if rand > 0.1
   robert_garcia.tweet("#{RandomTweet::MESSAGES.sample} \n#{current_time}")
 end
 
