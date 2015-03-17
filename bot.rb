@@ -232,25 +232,25 @@ module RandomTweet
     '@tenyawanya_bot おやつ'
   ]
 
-  CHOMADO_BOT = [
-    '@chomado_bot ホモ、足りてますか？',
-    '@chomado_bot 柴田亜美先生の作品はBLに入りますか？',
-    '@chomado_bot 松牛とワイシャツと私',
-    '@chomado_bot 絵師ディシ',
-    '@chomado_bot あーホモ',
-    '@chomado_bot みんな、オラにちょっとずつでいいからホモを分けてくれ',
-    '@chomado_bot スターフラチナッ！ﾎﾓﾎﾓﾎﾓﾎﾓﾎﾓﾎﾓﾎﾓｫ！！',
-    '@chomado_bot throw NullHomoException',
-    '@chomado_bot throw IndexHomoBoundException',
-    '@chomado_bot throw InvalidHomoArgumentException',
-    '@chomado_bot ホモ毛神拳。ホモモーモ・モーモモ'
-  ]
+  # CHOMADO_BOT = [
+  #   '@chomado_bot ホモ、足りてますか？',
+  #   '@chomado_bot 柴田亜美先生の作品はBLに入りますか？',
+  #   '@chomado_bot 松牛とワイシャツと私',
+  #   '@chomado_bot 絵師ディシ',
+  #   '@chomado_bot あーホモ',
+  #   '@chomado_bot みんな、オラにちょっとずつでいいからホモを分けてくれ',
+  #   '@chomado_bot スターフラチナッ！ﾎﾓﾎﾓﾎﾓﾎﾓﾎﾓﾎﾓﾎﾓｫ！！',
+  #   '@chomado_bot throw NullHomoException',
+  #   '@chomado_bot throw IndexHomoBoundException',
+  #   '@chomado_bot throw InvalidHomoArgumentException',
+  #   '@chomado_bot ホモ毛神拳。ホモモーモ・モーモモ'
+  # ]
 
   SYOBOCHIRN_BOT = [
     '@syobochirn おみくじひいてー'
   ]
 
-  MESSAGES = ADV_MESSAGES + IDLE_TALKS + TENYAWANYA_BOT + SYOBOCHIRN_BOT + CHOMADO_BOT
+  MESSAGES = ADV_MESSAGES + IDLE_TALKS + TENYAWANYA_BOT + SYOBOCHIRN_BOT
 end
 
 def random_advertise(robert_garcia, twitter_id, tweet)
