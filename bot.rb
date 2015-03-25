@@ -265,7 +265,7 @@ robert_garcia.stream_client.on_timeline_status do |status|
   begin
     twitter_id = status.user.screen_name
     tweet = status.text
-    random_advertise(robert_garcia, twitter_id, tweet)
+    # random_advertise(robert_garcia, twitter_id, tweet)
     # TODO: そのうち使う管理者限定モード
     # author_only(twitter_id, tweet)
     anyone(robert_garcia, twitter_id, tweet)
